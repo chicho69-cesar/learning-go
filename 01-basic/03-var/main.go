@@ -10,7 +10,7 @@ func main() {
 	/* Esto es igual a poner: 
 	var x int = 42 + 7 */
 	x := 42 + 7
-	/* Scope a nivel de funcion */
+	/* Scope a nivel de función */
 	y := "Cesar Villalobos Olmos"
 
 	fmt.Println(x)
