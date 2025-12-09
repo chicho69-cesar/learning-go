@@ -1,0 +1,33 @@
+# Comandos Go
+
+- <strong style="color: red;">go version</strong>
+- <strong style="color: red;">go env</strong>
+- <strong style="color: red;">go help</strong>
+- <strong style="color: red;">go fmt</strong>
+    - ./…
+- <strong style="color: red;">go run</strong>
+    - Necesita el nombre del archivo, ejemplo: go run main.go
+    - go run <nombre de archivo>
+    - go run *.go
+- <strong style="color: red;">go build</strong>
+    - Para un solo paquete main :
+        - Construye el archivo
+        - Si hay algún error, lo reporta
+        - Si no hay errores, coloca un ejecutable en el directorio
+    - Para múltiples paquetes o un archivo no main:
+        - Crea el archivo
+        - Si hay algún error, lo reporta
+        - Luego se desecha el archivo binario
+- <strong style="color: red;">go install</strong>
+    - Para un solo ejecutable:
+        - Compila el programa (lo crea)
+        - Nombra el ejecutable como el directorio que contiene el código.
+        - Coloca el ejecutable en workspace / bin
+            - $GOPATH / bin
+    - Para paquetes:
+        - Compila el paquete (lo crea)
+        - Coloca el ejecutable en workspace / pkg
+            - $GOPATH / pkg
+        - Crea un archivo tipo fichero(archive file) con extensión .a
+- <strong style="color: red;">flags</strong>
+    - -race
