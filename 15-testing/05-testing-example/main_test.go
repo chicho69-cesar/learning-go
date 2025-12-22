@@ -1,0 +1,43 @@
+package main
+
+import (
+	"testing"
+	"strings"
+)
+
+func TestCat(t *testing.T) {
+	s := "Shaken not stirred"
+	strs := strings.Split(s, " ")
+	s = Cat(strs)
+	if s != "Shaken not stirred" {
+		t.Error("Expected", "Shaken not stirred", "Got", s)
+	}
+}
+
+func TestJoin(t *testing.T) {
+	s := "Shaken not stirred"
+	strs := strings.Split(s, " ")
+	s = Join(strs)
+	if s != "Shaken not stirred" {
+		t.Error("Expected", "Shaken not stirred", "Got", s)
+	}
+}
+
+const poem = "We ask ourselves, Who am I to be brilliant, gorgeous, talented, fabulous? Actually, who are you not to be? Your playing small does not serve the world. There is nothing enlightened about shrinking so that other people won't feel insecure around you. We are all meant to shine, as children do. We were born to make manifest the glory that is within us. It's not just in some of us; it's in everyone. And as we let our own light shine, we unconsciously give other people permission to do the same. As we are liberated from our own fear, our presence automatically liberates others. - Marianne Williamson"
+var poemStr []string
+
+func BenchmarkCat(b *testing.B) {
+	poemStr = strings.Split(poem, " ")
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Cat(poemStr)
+	}
+}
+
+func BenchmarkJoin(b *testing.B) {
+	poemStr = strings.Split(poem, " ")
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Join(poemStr)
+	}
+}

@@ -1,0 +1,3 @@
+mode: set
+example.com/testing-cesar/main.go:28.13,30.2 1 0
+example.com/testing-cesar/main.go:32.29,34.2 1 1
