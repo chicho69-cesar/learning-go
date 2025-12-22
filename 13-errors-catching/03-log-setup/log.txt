@@ -1,0 +1,1 @@
+2023/01/05 13:26:09 Ocurrio un error:  open sin-archivo.txt: The system cannot find the file specified.
